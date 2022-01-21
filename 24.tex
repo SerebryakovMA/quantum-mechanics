@@ -1,0 +1,47 @@
+\newpage
+\chapter{Момент импульса}
+\par //придется много слушать//
+\section{Введение. Определение момента импульса}
+\par Симметрия и изотропия пространства обеспечивают неизменность $\hat{H}$ при поворотах, откуда следует закон сохранения момента импульса. Введем $\delta \vec{\varphi}$ по оси вращения, тогда $\delta \vec{r_i} = [\delta \vec{\varphi}, \vec{r_i}]$.
+$$\psi(\{\vec{r_i}+\delta \vec{r_i}\})= \psi(\vec{r_i})+\sum_i \delta r_i \nabla_i \psi = \underbrace{(1+\delta \vec{\varphi} \sum_i [r_i \nabla_i])}_{\text{оператор б.м. поворота}} \psi$$
+$$\left[\sum_i [r_i \nabla_i], \hat{H}\right]=0$$
+$$\hbar \hat{\vec{L}} = -i \hbar [\vec{r}\nabla]$$
+$$\overline{\vec{L}}= -i \hbar \int \psi^+ \sum_i [r_i \nabla_i] \psi dq$$
+\par В невырожденном стационарном состоянии $\overline{\vec{L}} = 0$, т.к. при инвертировании времени $t \rightarrow - t$ получим $\overline{L}=-\overline{L}$, откуда и выходит, что $\overline{L} = 0$.
+\par Рассмотрим некоторые коммутаторы:
+$$ [\hat{L}_i, \hat{x}_k]=i \varepsilon_{ikj}\hat{x}_j \text{,}\; [\hat{L}_i, \hat{p}_k] = i \varepsilon_{ikj}\hat{p}_j \text{,}\; [\hat{L}_i, \hat{L}_k] = i \varepsilon_{ikj}\hat{L}_j$$
+\par Введем квадрат оператора момента импульса $\hat{\vec{L}}^2=\hat{L}^2_x+\hat{L}^2_y+\hat{L}^2_z$. Он одновременно измерим с каждой из компонент, т.е. $[\hat{\vec{L}}^2 L_i]=0$, $i=x,y,z$.
+\par Другие удобные комбинации:
+$$\hat{L}_{\pm}=\hat{L}_x\pm i \hat{L}_y, \; \; [\hat{L}_+\hat{L}_-]=2\hat{L}_z, \;\; [\hat{L}_z\hat{L}_-]=\hat{L}_-, \;\; [\hat{L}_z\hat{L}_+]=\hat{L}_+,\; \;$$
+$$ \hat{\vec{L}}^2= \hat{L}_-\hat{L}_+ + \hat{L}^2_z+\hat{L}_z = \hat{L}_+\hat{L}_- + \hat{L}^2_z-\hat{L}_z$$
+\par Рассмотрим сферические координаты:
+\begin{equation*}
+ \begin{cases}
+    $$ x= r cos \varphi sin \theta $$
+\\
+    $$ y= r sin \varphi sin \theta $$ 
+\\
+    $$z= r cos \theta$$
+ \end{cases}
+\end{equation*}
+\par Запишем наши операторы: $\hat{L}_z=-i \frac{\partial}{\partial \varphi}$, заметим, что $\hat{\vec{L}}^2$ практически представляет угловую часть лапласиана:
+$$\hat{L}_{\pm} = e^{\pm i \varphi} \left(\pm \frac{\partial}{\partial \theta} + i ctg \theta \frac{\partial}{\partial \varphi} \right) \; \;\; \hat{\vec{L}}^2 = - \left(\frac{1}{sin^2\theta} \frac{\partial^2}{\partial \varphi^2} +\frac{1}{sin\theta} \frac{\partial}{\partial \theta}sin \theta \frac{\partial}{\partial \theta} \right)$$
+\section{Собственные значения оператора $\hat{L}_z$}
+$$-i \frac{\partial}{\partial \varphi} \psi = l_z \psi, \text{, откуда } \; \psi = f(r, \theta) e^{i l_z \varphi}$$
+\par Из однозначности $\psi$-функции получаем, что $l_z = 0,\pm1, \pm2,...$.
+\par Заметим, что $\Phi_m(\varphi) = \frac{1}{\sqrt{2\pi}} exp (im\varphi)$ и $\int^{2\pi}_0 \Phi^*_m(\varphi) \Phi_{m^\prime}(\varphi) d\varphi = \delta_{m m^\prime } $.
+\section{Свойства}
+\par 1\textdegree. $z \sim -z$, для любого собственного значения $l_z$ существует $-l_z$.
+\par 2\textdegree. L - наибольшее возможное значение |M| (проекция).
+$\hat{\vec{L}}^2 - \hat{L}^2_z = \hat{L}^2_x  + \hat{L}^2_y>0$, поэтому собственные значения $l_z$ ограничены сверху по модулю.
+Если $\hat{L}_z\hat{L}_{\pm}\psi_M = (M \pm1) \hat{L}_{\pm} \psi_M $, то
+\begin{equation*}
+ \begin{cases}
+    $$ \psi_{M+1} = const \hat{L}_{+} \psi_M $$
+\\
+    $$ \psi_{M-1} = const \hat{L}_{-} \psi_M $$ 
+ \end{cases}
+\end{equation*}
+\par 3\textdegree. Т.к. не существует состояний с $M>l$, то $\hat{L}_+ \psi_l=0$.
+$$\hat{L}_- \hat{L}_+ \psi_l = \left(\hat{\vec{L}}^2- \hat{L}^2_z-\hat{L}_z \right) \psi_l =0$$
+\par \textbf{Собственные значения оператора}: $\hat{\vec{L}}^2\psi= l(l+1)\psi$, причем $M=l,l-1, ..., -l$. Итого $2l+1$ значений М.

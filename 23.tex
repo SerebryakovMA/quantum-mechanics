@@ -1,0 +1,17 @@
+\newpage
+\chapter{Квантовомеханическая частица в однородном электрическом поле}
+\par Мы знаем, что на частицу с зарядом $e$ в электрическом поле действует сила $F=eE$, потенциал тогда $U=-Fx$. Запишем УШ
+$$\psi^{\prime \prime} + \frac{2m}{\hbar^2} \left(E+ Fx \right) \psi =0 $$
+\par В импульсном представлении ($\psi(x)\rightarrow a(p)$):
+$$\hat{H} = \frac{p^2}{2m}-i\hbar F \frac{d}{dp}$$
+$$ a(p) = \frac{1}{2\pi\hbar F} exp \left(\frac{i}{\hbar F} (Ep - \frac{p^3}{2m}) \right)$$
+\par Обратным Фурье преобразованием найдем $\psi(x)$. Для этого обезразмерим уравнение, введя переменную
+$$\xi = \left(x+\frac{E}{F} \right) \left(\frac{2mE}{\hbar^2} \right)^{1/3}$$
+$$\psi^{\prime \prime} + \xi \psi =0$$
+\par Опять решение выражается в спец-функциях - \textbf{функциях Эйри} $\Phi (\xi)$:
+$$\psi(\xi) = A \Phi (-\xi) \text{, где } \Phi (\xi) = \frac{1}{\sqrt{\pi}} \int^{\infty}_0 cos \left(\frac{u^3}{3}+ u \xi \right) du$$
+\par Рассмотрим асимптотики. При $\xi \rightarrow -\infty$ имеем $ \psi \rightarrow \frac{A}{2|\xi|^{1/4}} exp \left( - \frac{2}{3} |\xi|^{3/2} \right)$ - затухание. При $\xi \rightarrow \infty$ соответственно $\psi \rightarrow \frac{A}{|\xi|^{1/4}} sin \left( \frac{2}{3} \xi^{3/2}+\frac{\pi}{4} \right)$ - стоячая волна с переменной частотой. Нормировка на $\delta$-функцию $\int \psi(\xi)\psi(\xi^{\prime}) d\xi = \delta(E^{\prime}-E)$ даст полный ответ
+$$\psi(\xi) = \frac{A}{2 \xi^{1/4}} \left(exp[i(\left(\frac{2}{3} \xi^{3/2}-\frac{\pi}{4} \right)] + exp[-i\left(\frac{2}{3} \xi^{3/2}-\frac{\pi}{4} \right)] \right) $$
+\par Плотность потока в каждой волне 
+$$V \left( \frac{A}{2 \xi^{1/4}}\right)^2 = \sqrt{\frac{2}{m}(E+Fx)}\left( \frac{A}{2 \xi^{1/4}}\right)^2 = A^2 \frac{(2\hbar F)^{}1/3}{4m^{2/3}}$$
+\par Надо нормировать на... //послушать пару

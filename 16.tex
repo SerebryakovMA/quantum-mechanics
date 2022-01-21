@@ -1,0 +1,11 @@
+\newpage
+\chapter{Импульсное представление}
+\par Рассмотрим оператор координат, с его помощью можем определить среднее значение координат: $\overline{\vec{r}} = \int \psi^* \vec{r} \psi dq$, подействуем этим оператором на волновую функцию, которую разложим в Фурье по координате:
+$$ \vec{r} \psi (\vec{r}) = \int \vec{r} a(\vec{p} {,} t) e^{\frac{i \vec{p} \vec{r}}{\hbar}} \frac{d^3p}{(2 \pi \hbar)^3} $$
+\par Учитывая, что $\vec{r}  e^{\frac{i \vec{p} \vec{r}}{\hbar}} = -i \hbar \frac{\partial }{\partial \vec{p}}  e^{\frac{i \vec{p} \vec{r}}{\hbar}} $, а $\underbrace{\frac{\partial }{\partial \vec{p}} a \cdot  e^{\frac{i \vec{p} \vec{r}}{\hbar}} \bigg|_{- \infty}^{\infty}}_{\rightarrow 0} - \frac{\partial a }{\partial \vec{p}} \cdot e^{\frac{i \vec{p} \vec{r}}{\hbar}}$, что получается интегрированием по частям, получим:
+$$ \vec{r} \psi (\vec{r}) = i \hbar \int e^{\frac{i \vec{p} \vec{r}}{\hbar}} \frac{\partial a }{\partial \vec{p}} \frac{d^3p}{(2 \pi \hbar)^3} $$
+\par То есть мы переходим от $\psi(\vec{r})$ к $a(\vec{p})$, оператор координаты в этом представлении $\hat{\vec{r}} = i \hbar \frac{\partial \vec{a} }{\partial \vec{p}} $. Домножим скалярно получающееся равенство на $\psi^*$ слева и проинтегрируем по всему объему.
+$$ \overline{\vec{r}} = \iint \psi^* (r) i \hbar \frac{\partial \vec{a} }{\partial \vec{p}} e^{\frac{i \vec{p} \vec{r}}{\hbar}} dV \frac{d^3p}{(2 \pi \hbar)^3}$$
+\par Здесь скрыт сопряженный Фурье-образа $\int \psi^* (\vec{r}) i \hbar e^{\frac{i \vec{p} \vec{r}}{\hbar}} dV = a^*(\vec{p})$, общий вид остался таким же с точностью до замен $\vec{r} \rightarrow \vec{p}$ и $\psi \rightarrow a$:
+$$  \overline{\vec{r}} =\int i \hbar a^*(\vec{p})  \frac{\partial \vec{a} }{\partial \vec{p}} \frac{d^3p}{(2 \pi \hbar)^3} $$
+\par Оператор импульса диагонален в данном представлении.

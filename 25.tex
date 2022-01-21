@@ -1,0 +1,25 @@
+\newpage
+\chapter{Собственные функции момента импульса}
+//здесь было много слов о полной системе измеримых физических величин//
+\par Например, для $E=\frac{\vec{p}^2}{2m}$ есть $\hat{p}_x, \hat{p}_y, \hat{p}_z$  и все они меж собой коммутируют, каждый имеет свои собственные значения, определяющие энергию. В 1D 1 квантовое число ($p\equiv p_x$ - значит, одно собственное число), в 2D - 2, в 3D - 3. Мы рассматриваем 3D случай и у нас уже есть $\hat{L}_z$ и $\hat{L}^2$, не хватает еще одного оператора, и скорее всего эта третья физическая величина связана с радиальной компонентой.
+\par Вспомним выражение $\hat{\vec{L}}^2=  \hat{L}_+\hat{L}_- + \hat{L}^2_z-\hat{L}_z$ и определим матричные элементы (первое слагаемое есть произведение двух матриц А и В, равное $\sum A_{ij}B_{jk}$)
+$$l(l+1)= <M|\hat{L}_+|M-1><M-1|\hat{L}_-|M> + M^2 -M$$
+\par Т.к. операторы $\hat{L}_+$ и $\hat{L}_-$ являются эрмитово сопряженными (из-за эрмитовости $\hat{L}_x$ и $\hat{L}_y$), то $<M-1|\hat{L}_-|M> = <M|\hat{L}_+|M-1>^*$, а значит, $|<M|\hat{L}_+|M-1>|^2=(l-M+1)(l+M)$ и 
+$$<M|\hat{L}_+|M-1>|=<M-1|\hat{L}_-|M> = \sqrt{(l-M+1)(l+M)}$$
+\par Знак перед корнем - это фаза выбранных собственных функций базиса, в котором мы работаем. Назовем собственные функции оператора $\hat{\vec{L}}^2$:
+$$\int |Y_{lM}|^2 d \Omega = 1, \; d \Omega = sin \theta d\theta d\varphi$$
+\par Выберем $Y_{lM} = \Phi_M(\varphi)F_{lM}(\theta)$, где $\Phi_M(\varphi)$ уже вывели, а значит, $\int^{\pi}_0 |F_{lM}|^2 sin\theta d \theta = 1$.
+\par Запишем УШ для оператора $\hat{\vec{L}}^2$:
+$$\frac{1}{sin^2\theta} \frac{\partial^2\psi}{\partial \varphi^2} +\frac{1}{sin\theta} \frac{\partial }{\partial \theta}sin \theta \frac{\partial \psi}{\partial \theta} +l(l+1)\psi =0$$
+\par Решение содержит присоединенные полиномы Лежандра
+$$F_{lM} = (-1)^M i^l \sqrt{\frac{2l+1}{2}\frac{(l-M)!}{(l+M)!}} P^M_l (cos\theta)$$
+\par Как это вспомнить на экзамене? Никак. Подействуем оператором $\hat{L}_+$ на функцию $Y_{ll}$ или $\hat{L}_-$ на $Y_{l, -l}$, чтобы получить ноль:
+$$\hat{L}_+Y_{ll} =0\; \rightarrow \; Y_{ll} = \frac{1}{2\pi} e^{il\varphi}F_{ll}(\theta)$$
+\var Пользуемся оператором $\hat{L}_+$:
+$$\frac{d F_{ll}}{d \theta} - l \cdot ctg \theta F_{ll}=0 \; \rightarrow \; F_{ll}= C sin^{l}x$$
+\par Отсюда $F_{ll}= (-i)^l \sqrt{\frac{(2l+1)!}{2}} \frac{1}{2^ll!} sin^l \theta$. Шагаем вниз по правилу:
+$$\hat{L}_- Y_{l, m+1}= \left(\hat{L}_- \right)_{m, m+1}Y_{l,m}= \sqrt{(l-m+1)(l-m)} Y_{lm}$$
+\par Попозже напишу, откуда получаются следующие полезные формулы:
+$$\sqrt{\frac{(l-m)!}{(l+m)!}}Y_{lm}= \frac{1}{\sqrt{(2l)!}} \hat{L}^{l-m}_- Y_{ll}$$
+$$\hat{L}_- \left(f(\theta)e^{im\varphi} \right) = e^{-i(m-1)\varphi}sin^{l-1}\theta \hat{\vec{L}}^2 \psi = l(l+1) \psi$$
+$$F_{lm}(\theta)= (-i)^l \sqrt{\frac{2l+1}{2}\frac{(l+M)!}{(l-M)!}} \frac{1}{2^l l! sin^m \theta} \frac{d^{l-m}}{(dcos\theta)^{l-m}} sin^{2l}\theta$$

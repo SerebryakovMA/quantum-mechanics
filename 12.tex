@@ -1,0 +1,11 @@
+\newpage
+\chapter{Уравнение Шрёдингера}
+\par Запишем оператор гамильтониана для движения одной квантомеханической частицы в потенциале: $\hat{H} =\frac{\hat{\vec{p}}^2}{2m}+U(\vec{r})$. (Некоторый эмпирический вывод уравнения Шредингера приведен в \hyperref[]{билете №4})
+$$(-\frac{\hbar^2}{2m} \nabla^2+U(\vec{r}))\psi = E \psi $$
+\par Волновую функцию ищем в виде $\psi = a e^{i \frac{S}{\hbar}}$, подставляем в УШ, разделяем действительную и мнимую части:
+$$\underbrace{\frac{\partial S}{\partial t} +\frac{1}{2m}(\nabla S)^2+ U}_{\text{уравнение Гамильтона-Якоби, если S - действие}} - \frac{\hbar^2}{2ma}\nabla a =0$$
+$$\frac{\partial a}{\partial t} +\frac{a}{2m}\nabla S+\frac{1}{m}\nabla S \nabla a =0$$
+\par Из последнего получим уравнение непрерывности для плотностей вероятности $a^2 = |\psi|^2$:
+$$ \frac{\partial a^2}{\partial t} + div (\underbrace{a^2 \frac{\nabla S}{m}}_{\text{роль потока энергии}}) = 0$$
+\par Классическая скорость частицы 
+$$\frac{\nabla S}{m} = \frac{\vec{p}}{m}$$

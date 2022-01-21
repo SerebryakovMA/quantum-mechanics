@@ -1,0 +1,21 @@
+\newpage
+\chapter{Калибровочное преобразование в квантовой механике}
+\par Запишем УШ для ЭМ поля, учитывая $\vec{B} = rot\vec{A}$ и $ \vec{E}= - \nabla \varphi - \frac{1}{c} \frac{\partial \vec{A}}{\partial t}$:
+$$\left(\frac{\left(\hat{\vec{p}} - \frac{e}{c} \vec{A}(\vec{r}) \right)^2}{2m} + U(\vec{r})\right) \psi = i \hbar \frac{\partial \psi}{\partial t}$$
+\par Всегда можем положить 
+\begin{equation*}
+ \begin{cases}
+    \vec{\widetilde{A}} = \vec{A} + \nabla f
+\\
+    \widetilde{\varphi} = \varphi - \frac{1}{c} \dot{f}
+ \end{cases}
+\end{equation*}
+\par поля останутся прежними, но уравнения изменятся, вопрос в том, как добиться такого же уравнения. Попробуем преобразовать $\psi$-функцию, добавив фазу (дабы избежать изменения вероятности): $\psi = \widetilde{\psi} e^{i \alpha(\vec{r},t)}$. Подставим в Гамильтониан, сначала для одного действия оператора, а потом еще разок:
+$$e^{i\alpha} \left(-i \hbar \nabla + \underline{\hbar \nabla \alpha} - \frac{e}{c} \vec{A} \underline{- \frac{e}{c} \nabla f }\right) \widetilde{\psi}$$
+$$\left(-i \hbar \nabla + \hbar \nabla \alpha- \frac{e}{c} (\vec{\widetilde{A}} + \nabla f) \right)^2$$
+\par Подчеркнутые слагаемые в сумме должны давать ноль, а значит, $\alpha= - \frac{ef}{\hbar c}$. Но тогда получается, что $\alpha$ - функция $f$ и дифференцировать ее нужно как сложную функцию, получим $\dot{\alpha}$, а если же потенциал взять в виде $U(\vec{r})= e \left(\widetilde{\varphi}-\frac{1}{c} \dot{f} \right)$, то и этот фактор сократится.
+\par Пускай ничего не знаем про всякие калибровки, но у нас есть УШ и оно симметрично относительно локальных фазовых преобразований волновой функции. Но при подстановке уравнения изменились, т.к. про векторный потенциал мы ничего не знаем. Вводим ЭМ поле как компенсацию изменения волновой функции (результат требования симметрии). Такие поля называются \textbf{калибровочными полями}. Сам заряд $e$ получается так же как результат симметрии. 
+//много слов, смысла мало//
+\par Рассмотрим, в каком порядке нужно действовать операторами $\hat{\vec{p}}$ и $\hat{\vec{A}}$:
+$$[\hat{\vec{p}}\hat{\vec{A}}]\psi = (\hat{\vec{p}}\hat{\vec{A}} - \hat{\vec{A}}\hat{\vec{p}})\psi = -i \hbar \nabla(\psi \vec{A})+i \hbar \vec{A} \nabla \psi = \left|\nabla(\psi \vec{A} ) = \vec{A} \nabla \psi - \psi div \vec{A} \right| = -i \hbar \psi div \vec{A}$$
+\par Выбор $div \vec{A}$  и есть \textbf{калибровка}. Уровнения от калибровочных преобразований зависеть не должны, а значит, коммутатор вводить не стоит, оставляем в Гамильтониане комбинацию $\hat{\vec{p}} - \frac{e}{c} \vec{A}(\vec{r})$. 

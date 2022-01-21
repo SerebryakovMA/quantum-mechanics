@@ -1,0 +1,21 @@
+\newpage
+\chapter{Условие нормировки для волновых функций. Непрерывный и дискретный спектр}
+\par Рассмотрим нормировку собственных функций непрерывного спектра на примере оператора импульса: $\hat{\vec{p}} \psi_p = \vec{p} \psi_p$. Под спектром всегда имеем в виду спектр собственных значений какого-то оператора.
+$$ -i \hbar \nabla \psi_p = \vec{p} \psi_p $$
+$$ \psi_p \approx  e^ \frac{i \vec{p} \vec{r}}{\hbar} $$
+\par Фактически, волновую функцию раскладываем по базису из СФ оператора $\hat{\vec{p}}$. Итак, пусть есть некая физическая величина \textit{f} с СФ $\psi_f$: $\hat{f}\psi_f = f \cdot \psi_f$, нашли мысленно все орты в функциональном пространстве, перешли в f-представление, предполагая, что спектр непрерывный, тогда: $\psi (q)= \int a_f \psi_f df$, \textit{q} - обобщенная координата. Это \textbf{общее устройство смены представления}. Хотим нормировку, характерную для плотности вероятности: $\int \psi \cdot \psi^* dq = \int |a_f|^2 df =1$.
+$$ \int \psi \cdot \psi^* dq = \iint a_f^* \psi_f^* \psi df dq \longrightarrow a_f = \int \psi(q) \psi_f^*(q) dq$$
+\par Подставим представление $\psi (q)$ в полученную формулу для $a_f$: 
+$$ a_f = \int a_{f\prime} \underbrace{\bigg( \int \psi_{f\prime} \psi_f^* dq \bigg)}_{\text{должно быть } \delta(f- f\prime)} df\prime $$
+\par Возвращаемся к представлению $\psi (q)$:
+$$ \psi (q) = \int \psi(q\prime) \underbrace{\bigg( \int \psi_f^*(q\prime) \psi_f (q) df \bigg)}_{\text{еще условие } \delta(q- q\prime)} dq\prime $$
+\par Так же это называется \textit{ условием полноты}. Если полный спектр дискретен, то $\sum_{n} \psi_n^* (q\prime) \psi_n (q)= \delta(q- q\prime)$. Итого условие нормировки: 
+$$ \int \psi_{p\prime}^*  \psi_p d^3r = (2 \pi \hbar) ^3 \delta (\vec{p\prime} - \vec{p})$$
+$$ \psi(\vec{r}) = \int a(\vec{p}) \psi_p (r) \frac{d^3 p}{(2 \pi \hbar)^3} \text{, где }  a(\vec{p}) =\int \psi(\vec{r}) e^{-\frac{i \vec{p} \vec{r}}{\hbar}} d^3r $$
+\par Вероятность того, что частица попадет в интервал импульса $d^3p$ есть $|a(\vec{p})|^2 \frac{d^3 p}{(2 \pi \hbar)^3} $, здесь используется свойство $\delta$-функции:
+$\frac{1}{2 \pi} \int e^{i \alpha x} d \alpha = \delta (x)$.
+\par Повторим предыдущие рассуждения для дискретного спектра:  $\hat{f}\psi_n = f_n \cdot \psi_n$, разложим по системе СФ $\psi = \sum_{n} a_n \psi_n$, требуем $\sum_{n}a_n a_n^* =\int \psi^* \psi dq =1 $. Домножим скалярно справа на волновую функцию выражение  $\psi^* = \sum_{n} a_n^* \psi_n^*$ и проинтегрируем по \textit{dq}:
+$$ \int \psi^* \psi dq = \sum a_n^* \int \psi_n^* \psi dq \rightarrow a_n = \int \psi \cdot \psi_n^* dq$$
+\par Подставим разложение для волновой функции:
+$$ a_n = \sum_{m}a_m \int \psi_m \psi_n^* dq$$
+\par Для выполнения условий требуем $\int \psi_m \psi_n^* dq = \delta_{nm}$

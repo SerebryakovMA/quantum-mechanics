@@ -1,0 +1,125 @@
+\documentclass[12pt]{report}
+\usepackage[a4paper]{geometry}
+% See geometry.pdf to learn the layout options. There are lots.
+%\geometry{a4paper}
+\usepackage{listings}
+\usepackage[cm]{fullpage}
+\usepackage{layout}
+\usepackage{amsthm}
+\usepackage{amssymb,amsmath,amsfonts,latexsym,dsfont}
+\usepackage[unicode,colorlinks]{hyperref}
+
+\usepackage[usenames]{color}
+\usepackage{colortbl}
+\hypersetup{linkcolor=blue, urlcolor=blue, colorlinks=true}
+\usepackage{physics}
+\usepackage{ upgreek }
+\usepackage{yfonts}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage[warn]{mathtext}
+\usepackage[T1,T2A]{fontenc}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[parfill]{parskip}
+\usepackage[english, russian]{babel}
+%\titleformat{\section}[block]{\color{black}\Large\bfseries\filcenter}{}{1em}{}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\setcounter{secnumdepth}{0}
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant }
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rg}{rg}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\proj}{proj}
+
+\usepackage{amsfonts}
+\usepackage{cancel}
+% ... or a4paper or a5paper or ...
+%\geometry{landscape} % Activate for rotated page geometry
+%\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+\else
+\usepackage[pdftex]{graphicx}
+\lstset{language=C++}
+\usepackage{pgffor}
+
+
+\title{Теоретические вопросы зима}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\renewenvironment{proof}{{\bfseries Доказательство:}}{
+\begin{}
+$\square$\\\\
+\end{}}
+\newenvironment{solution}{{\bfseries Решение:}}{$\square$\\\\}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{proposition}{Утверждение}
+\newtheorem{corollary}{Следствие}
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+\newtheorem{notation}{Обозначение}
+\newtheorem{example}{Пример}
+\newtheorem{problem}{Задача}
+\newtheorem{sense}{Смысл}
+\newtheorem{remark}{Замечание}
+\newcommand{\vect}[1]{\boldsymbol{#1}}
+
+\setlength{\parindent}{5ex}
+\usepackage{indentfirst}
+
+\usepackage{ stmaryrd }
+\usepackage{wrapfig}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\input{1}
+\input{2}
+\input{3}
+\input{4}
+\input{5}
+\input{6}
+\input{7}
+\input{8}
+\input{9}
+\input{10}
+\input{11}
+\input{12}
+\input{13}
+\input{14}
+\input{15}
+\input{16}
+\input{17}
+\input{18}
+\input{19}
+\input{20}
+\input{21}
+\input{22}
+\input{23}
+\input{24}
+\input{25}
+\input{26}
+\input{27}
+\input{28}
+\input{29}
+\input{30}
+\input{31}
+\input{32}
+\input{33}
+\input{Unterhaltung}
+\end{document}

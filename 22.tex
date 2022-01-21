@@ -1,0 +1,50 @@
+\newpage
+\chapter{Гармонический осциллятор}
+\par Запишем оператор Гамильтона, выбрав коэффициенты в потенциале таким образом, что при записи уравнений Ньютона мы получим настоящий гармонический осциллятор с частотой $w$:
+$$\hat{H}=\frac{\hat{\vec{p}}^2}{2m} +\frac{m w^2x^2}{2}$$
+\par В УШ применим масштабное преобразование $x=y\cdot L$:
+$$\left(-\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + \frac{m w^2x^2}{2} \right) \psi = E \psi$$
+$$\left(-\frac{\hbar^2}{2mL^2} \frac{\partial^2}{\partial y^2} + \frac{m w^2L^2}{2} y^2 \right) \psi = E \psi$$
+$$\left(- \frac{\partial^2}{\partial y^2} + \frac{m w^2L^4}{\hbar^2} y^2 \right) \psi = \left( E \frac{2mL^2}{\hbar^2} \right)\psi$$
+\par Хотим, чтобы $ \frac{m w^2L^4}{\hbar^2} =1$, а значит, $L = \sqrt{\frac{\hbar}{mw}}$ и $ E \frac{2mL^2}{\hbar^2} = E \frac{2}{\hbar w}$ - число, для нижнего уровня порядка единицы, тогда $E_{min}=\frac{\hbar w }{2}$. Итак,
+$$E_{min} \sim \hbar w$$
+\par Весь спектр дискретный, тогда решение ...
+\par Найдем его двумя способами. 
+\section{A. Матричный метод}
+\par Уравнение движения $\hat{\ddot{x}} + w^2 \hat{x}=0$, запишем в матричном виде, здесь индексы отвечают каким-то базисным функциям:$(\ddot{x})_{mn} + w^2 x_{mn}=0$. Перейдем к такому набору, в котором базисные функции $\hat{H}$ диагонализуют его, обозначение не будем менять. Тогда
+$$(\ddot{x})_{mn} = i w_{mn}(\dot{x})_{mn}=\left|\text{ здесь }w_{mn}=\frac{E_m-E_n}{t} \right|= - w^2_{mn}x_{mn}$$
+\par Имеем $(w^2_{mn}-w^2)x_{mn} =0$, либо $x_{mn} =0$, либо $w_{mn}=\pm w$. Проведем нумеризацию состояний, т.ч. $\pm w$ будет соответствовать соседним уровням дискретного спектра $n \rightarrow n\mp 1$, т.е. $w_{n, n\mp1}=\pm w$. Не равны нулю только $x_{n, n\mp1}$.
+\par Пусть волновая функция есть функция действительная, тогда из эрмитовости $\hat{x}^+=\hat{x}$ имеем $x_{mn}=x_{nm}$. Рассмотрим коммутатор $\hat{\dot{x}}$ и $\hat{{x}}$:
+$$\hat{\dot{x}}\hat{{x}}- \hat{{x}}\hat{\dot{x}} = -i \frac{\hbar}{m} $$
+$$(\dot{x} x)_{mn} - (x\dot{x} )_{mn}=-i \frac{\hbar}{m}  \delta_{mn}$$
+\par $m=n$, $w_{ln}=-w_{nl}$
+$$i \sum_l (w_{nl} x_{nl}x_{ln} - x_{nl}w_{ln}x_{ln})= 2 i \sum_l w_{nl}x^2_{nl} = -i \frac{\hbar}{m} $$
+\par Пусть $l = n \pm 1$:
+$$(x_{n+1, n})^2 - (x_{n, n-1})^2 = \frac{\hbar}{2mw}$$
+\par Выберем $n=0$ для основного состояния, понятно, что $x_{0, -1}=0$. Сумма арифметической прогрессии даст
+$$(x_{n, n-1})^2 =\frac{n \hbar}{2mw} \text{ } \rightarrow  \text{ } x_{n, n-1}=x_{n-1, n}= \sqrt{\frac{n \hbar}{2mw} }$$
+\par Причем знак перед корнем - вопрос выбора системы функций.
+$$H_{nn}=E_n=\frac{m}{2} \left((\dot{x}^2)_{nn}+w^2(x^2)_{nn} \right)= \frac{m}{2} \left(\sum_l i w_{nl}x_{nl}iw_{ln}x{ln}+w^2\sum_l x_{nl}x_{nl} \right)=$$
+$$=\frac{m}{2} \sum_l (w^2+w^2_{nl})x^2_{ln} =\frac{m}{2} 2w^2 \left(\frac{n \hbar}{2mw} + \frac{(n+1) \hbar}{2mw} \right) = m \frac{\hbar}{2} (2n+1)=\hbar w \left(n + \frac{1}{2} \right), \text{ где } n = 0,1,2...$$
+\par Получили искомый спектр 
+\section{Б. Решение через УШ}
+\par Запишем УШ
+$$ \psi^{\prime\prime}_{yy} + \left(\frac{2E}{\hbar w} - y^2 \right) \psi =0$$
+\par Вообще решением являются спецфункции - функции параболического цилиндра, но кто ж их запоминает для экзамена, будем смотреть асимптотики. При $y \rightarrow \infty$ уравнение принимает простой вид $ \psi^{\prime\prime} - y^2 \psi =0$, значит, в асимпотике решение будет содержать 
+$$\psi = \upchi e^{-\frac{y^2}{2}}$$
+\par Обозначим $\frac{2E}{\hbar w} -1 =2n$, тогда $\upchi^{\prime \prime}-2y \upchi^\prime +2n\upchi =0$. При $y \rightarrow \pm \infty $ $\upchi$ растет быстрее конечной степени у. Решение существует только для целых n. Область расходимости отодвигается как можно дольше, получаем сходящееся значения $\psi$(решение). Эти полиномы $\upchi$ есть \textbf{полиномы Эрмита $H_n(y)$}:
+$$H_n(y) = (-1)^n e^{y^2} \frac{d^n}{dy^n}e^{-y^2}$$
+\par С учетом нормировки получим решение 
+$$\psi_n = \left( \frac{mw}{\pi \hbar} \right)^{\frac{1}{4}} \frac{1}{\sqrt{2^n n!}} exp \left(- \frac{mw}{2 \hbar} x^2 \right) H_n \left(x \sqrt{\frac{mw}{\hbar}} \right)$$
+\par Основное состояние $n=0$: 
+$$\psi_0 = \left( \frac{mw}{\pi \hbar} \right)^{\frac{1}{4}} exp \left(- \frac{mw}{2 \hbar} x^2 \right) $$
+\par Рассмотрим оператор
+$$\left(\hat{\dot{x}} - iw \hat{x} \right)_{n-1, n} = - \left(\hat{\dot{x}} + iw \hat{x} \right)_{n, n-1} = i \sqrt{\frac{2\hbar w n }{m}}$$
+\par Т.к. $\psi_{-1}=0$, имеем $\left(\hat{\dot{x}} - iw \hat{x}\right) \psi_0 = 0 $ - дифференциальное уравнение на $\psi_0$. Подставляем $\hat{\dot{x}} = - i \frac{\hbar}{m} \frac{\partial}{\partial x}$:
+$$\left(\hat{\dot{x}} + iw \hat{x}\right) \psi_{n-1} = \left(\hat{\dot{x}} + iw \hat{x}\right)_{n, n-1} \psi_{n}= i \sqrt{\frac{2w\hbar n}{m}} \psi_n $$
+$$\psi_n = \underbrace{\sqrt{\frac{m}{2w\hbar n}} \left(-\frac{\hbar}{m}\frac{d}{dx}+wx \right)}_{\hat{a}^+} \psi_{n-1}$$
+\par $\hat{a}^+$ есть \textbf{оператор рождения} кванта энергии в данном осцилляторе, можем таким же способом определить \textbf{оператор уничтожения} $\hat{a}^- \equiv \hat{a}$.
+$$\hat{a}^+ = \sqrt{\frac{m}{2w\hbar n}} \left(-\frac{\hbar}{m}\frac{d}{dx}+wx \right) = \sqrt{\frac{m}{2w\hbar n}} \left(-i\frac{\hat{p}}{m}+wx \right) $$
+$$\hat{a} = \sqrt{\frac{m}{2w\hbar n}} \left(\frac{\hbar}{m}\frac{d}{dx}+wx \right) $$
+\par Если посчитать коммутатор ручками, получится, что $[\hat{a} \hat{a}^+]=1$. Так же можно записать оператор Гамильтона через данные операторы, причем $\hat{a}^+\hat{a}$ есть число квантов в одной моде:
+$$\hat{H}= \hbar w \left(\hat{a}^+\hat{a} +\frac{1}{2} \right)$$

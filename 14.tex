@@ -1,0 +1,23 @@
+\newpage
+\chapter{Плотность потока вероятности. Уравнение непрерывности}
+\par Запишем оператор гамильтониана для движения одной квантомеханической частицы в потенциале: $\hat{H} =\frac{\hat{\vec{p}}^2}{2m}+U(\vec{r})$. (Некоторый эмпирический вывод уравнения Шредингера приведен в \hyperref[]{билете №4})
+$$(-\frac{\hbar^2}{2m} \nabla^2+U(\vec{r}))\psi = E \psi $$
+\par Волновую функцию ищем в виде $\psi = a e^{i \frac{S}{\hbar}}$, подставляем в УШ, разделяем действительную и мнимую части:
+$$\underbrace{\frac{\partial S}{\partial t} +\frac{1}{2m}(\nabla S)^2+ U}_{\text{уравнение Гамильтона-Якоби, если S - действие}} - \frac{\hbar^2}{2ma}\nabla a =0$$
+$$\frac{\partial a}{\partial t} +\frac{a}{2m}\nabla S+\frac{1}{m}\nabla S \nabla a =0$$
+\par Из последнего получим уравнение непрерывности для плотностей вероятности $a^2 = |\psi|^2$:
+$$ \frac{\partial a^2}{\partial t} + div (\underbrace{a^2 \frac{\nabla S}{m}}_{\text{роль потока энергии}}) = 0$$
+\par Классическая скорость частицы 
+$$\frac{\nabla S}{m} = \frac{\vec{p}}{m}$$
+\par Запишем оператор скорости как производную оператора координаты, получим:
+$$\hat{\vec{V}}=\hat{\dot{\vec{r}}}=\frac{i}{\hbar}[\hat{H}\hat{\vec{r}}]=\frac{\hat{\vec{p}}}{m}$$
+\par Пусть есть некоторая физическая величина $f=f(\vec{r})$, тогда $[\hat{f}, \hat{V}]=0$.
+$$\hat{\dot{f}}=\frac{i}{2m\hbar}[\hat{p}^2, \vec{r}]=\frac{i}{2m\hbar} \left( \hat{\vec{p}}(f\hat{\vec{p}}-i\hbar\nabla f)-(\hat{\vec{p}}f i \hbar \nabla f)\hat{\vec{p}} \right) $$
+\par Тогда для оператора скорости имеем
+$$\hat{\dot{\vec{V}}} = \frac{i}{\hbar} \left( \hat{H} \hat{\vec{V}} - \hat{\vec{V}} \hat{H} \right) = \frac{1}{m\hbar} [ \hat{H}  \hat{\vec{p}}] = \frac{i}{m \hbar} [ \hat{\vec{V}},\hat{\vec{p}}]$$
+\par Отсюда $m \hat{\dot{\vec{V}}}=- \nabla V$. Продифференцируем интеграл от вероятности по некоторому объему:
+$$\frac{d}{dt} \int |\psi|^2 dV = \frac{i}{\hbar} \int \left(\psi \hat{H}^* \psi^* - \psi^* \hat{H} \psi \right)dV $$
+\par Учитывая, что $\hat{H}=\hat{H}^*=-\frac{\hbar^2}{2m}\nabla^2 + U$, а $\psi \nabla^2 \psi^* - \psi^* \nabla^2 \psi = div(\psi \nabla \psi^* - \psi^* \nabla \psi )$, получим минус интеграл от дивергенции некоторого вектора $\vec{j}$ - \textit{плотности потока вероятности}.
+$$ \vec{j} = \frac{i \hbar}{2m} \left(\psi \nabla \psi^* - \psi^* \nabla \psi \right)$$
+\par А так же из коммутации интегрирования и дифференцирования по времени в данном случае получим \textit{уравнение непрерывности}
+$$\frac{d}{dt}  |\psi|^2+div\vec{j} =0 $$

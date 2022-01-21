@@ -1,0 +1,13 @@
+\newpage
+\chapter{Соотношение неопределенностей}
+\par Неопределенность координаты и импульса есть среднеквадратичное отклонение: $\delta x = \sqrt{\overline{(x-\overline{x})^2}}$, $\delta p_x = \sqrt{\overline{(p_x-\overline{p_x})^2}}$.  $\overline{x}=\overline{p_x}=0$
+$$\int^\infty_\infty |\alpha x \psi + \frac{d\psi}{dx}|^2 dx \geq 0 \text{, }\alpha \in \Re $$
+\par $\int x^2|\psi|^2dx=(\delta x)^2$; $\int (x \frac{d\psi^*}{dx}\psi + x \psi^* \frac{d\psi}{dx})dx = \int x \frac{d|\psi|^2}{dx}dx= - \int |\psi|^2 dx = -1$
+$$\int \frac{d\psi^*}{dx} \frac{d\psi}{dx}dx = - \int \psi^* \frac{d^2 \psi}{dx^2} dx = (\frac{\delta p_x}{\hbar})^2$$
+\par Итого:
+$$\alpha^2(\delta x)^2 - \alpha + (\frac{\delta p_x}{\hbar})^2 > 0$$
+$$(\alpha \delta x -\frac{1}{2\delta x})^2 - \frac{1}{4(\delta x)^2} + (\frac{\delta p_x}{\hbar})^2 \geq 0$$
+\par Т.к. вышеупомянутое должно быть верно при любых действительных значениях $\alpha$, то верно и для такого конкретного значения, что 1ая скобка занулится, а значит
+$$(\frac{\delta p_x}{\hbar})^2 \geq \frac{1}{4(\delta x)^2} $$
+$$ \delta p_x \cdot \delta x \geq \frac{\hbar}{2}$$
+\par Последнее соотношение называют соотношением неопределенностей.

@@ -1,0 +1,36 @@
+\newpage
+\chapter{Четность состояния. Правило отбора по четности}
+\par Нам потребуется оператор инверсии $\hat{P}\psi(\vec{r}) =\psi(-\vec{r})$. Его собственные числа $\pm 1$, т.к. если подействовать данным оператором два раза, то получится $P^2 = 1$. Следующее свойство: $[\hat{P} \hat{\vec{L}}] =0$.
+\par Рассмотрим $I = \int \psi^*_n \hat{f}\psi_m dq $ и применим оператор инверсии, т.е. $\vec{r} \rightarrow{} -\vec{r} $, тогда 
+\begin{equation*}
+I = 
+ \begin{cases}
+    -I $ \rightarrow $ I=0
+    \\
+    +I
+ \end{cases}
+\end{equation*}
+\par Получили так называемое \textbf{правило отбора}. //куча пропущенных слов// Отбор возможных переходов собственных функций. Обозначения: $g$ - четное состояние (от нем. \textit{gerade}) и $u$ - нечетное (от нем. \textit{ungerade}).
+//здесь точно было пару примерчиков на лекции//
+\par Действие оператора иверсии в декартовых и сферических координатах соответственно:
+\begin{equation*}
+\left.\begin{cases}
+ x \rightarrow -x
+ \\
+ y \rightarrow -y
+ \\
+ z \rightarrow -z
+\end{cases} 
+\quad \begin{equation*}
+    \left.\begin{cases}
+    r \rightarrow  -r
+     \\
+   \varphi \rightarrow  \varphi + \pi
+     \\
+    \theta \rightarrow  \pi - \theta
+    \end{cases} 
+    \end{equation*}
+\end{equation*}
+\par Применим его к функциям:
+$$P^m_l(cos\theta)e^{im\varphi} \longrightarrow (-1)^m e^{im\varphi}(-1)^{l-m}P^m_l(cos\theta)$$
+\par Получается, что $P=(-1)^l$.

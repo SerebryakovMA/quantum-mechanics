@@ -1,0 +1,20 @@
+\newpage
+\chapter{Сохранение величин и симметрии}
+\par Пусть Лагранжиан явно от времени не зависит, т.е. имеет место однородность во времени:
+$$ \frac{dL}{dt}=\sum \frac{\partial L}{\partial t} \dot{q_i} + \sum {\partial L}{\partial \dot{q_i}} \ddot{q_i} = \bigg| \frac{\partial L}{\partial q_i} = \frac{d}{dt} \frac{\partial L}{\partial \dot{q_i}} \bigg| = \sum \dot{q_i}  \frac{d}{dt} \frac{\partial L}{\partial \dot{q_i}} + \sum \frac{\partial L}{\partial \dot{q_i}} \ddot{q_i} = \sum  \frac{d}{dt}  \bigg(\frac{\partial L}{\partial \dot{q_i}} \dot{q_i} \bigg)$$
+$$\frac{d}{dt} \bigg(\frac{\partial L}{\partial \dot{q_i}} \dot{q_i} - L \bigg)= \frac{dH}{dt} =0 $$
+\par //какие-то слова//
+$$ \delta L = \sum \frac{\partial L}{\partial \vec{r_{\alpha}}} \delta \vec{r_{\alpha}} = \vec{\varepsilon} \sum_{\alpha} \frac{\partial L}{\partial \vec{r_{\alpha}}} =0 $$
+\par Выполняется для любого значения $\forall \vec{\varepsilon} \longrightarrow \sum \frac{d}{dt} \frac{\partial L}{\partial \vec{v_{\alpha}}} =0 $ (суммарный импульс).
+\par Что значит сохранение величины с точки зрения квантовой механики? Рассмотрим $\hat{f}$ и $\hat{\dot{f}}$:
+$ \overline{f} = \int \psi^* \hat{f} \psi dq$, $ \dot{\overline{f}} = \int \psi^* \dot{\hat{f}} \psi dq = \overline{\dot{f}} $
+$$ \dot{\overline{f}} =\frac{d}{dt} \int \psi^* \hat{f} \psi dq = \int \psi^* \frac{\partial f}{\partial t} \psi dq + \int \frac{\partial \psi^*}{\partial t} f \psi dq + \int \psi ^* \hat{f} \frac{\partial \psi}{\partial t} dq $$
+Далее пользуемся уравнением Шредингера:
+$$ \dot{\overline{f}}= \int \psi^* \frac{\partial f}{\partial t} \psi dq + \int \psi^* \frac{i}{\hbar} [\hat{H} \hat{f}] \psi dq = \int \psi^*\bigg(\frac{\partial f}{\partial t} +\frac{i}{\hbar}[\hat{H} \hat{f}] \bigg) \psi dq = \int \psi^* \hat{\dot{f}} \psi dq $$
+\par Сохранение величины значит $ \hat{\dot{f}} =0$, а т.к. мы всегда рассматриваем величины, т.ч.$\frac{\partial f}{\partial t} = 0$, то получим условие сохранения величины - они должны коммутировать с гамильтонианом: $[\hat{H} {,} \hat{f}] =0 $.
+\par Всякий закон сохранения следует из какой-либо симметрии. Что есть закон сохранения в квантовой механике? Например, импульс сохраняется, если его оператор коммутирует с гамильтонианом, как было показано ранее: $[\hat{H}{,} \hat{\vec{p}}] =0 $.
+\par Возьмем небольшое приращение по координатам, если трансляция мала, можем разложить волновую функцию в ряд Тейлора: 
+$$ \psi (\{ \vec{r_i} + \delta \vec{r_i} \}) \approx  \psi (\{ \vec{r_i} \}) + \sum \delta \vec{r_i} \nabla \psi (\{ \vec{r_i} \}) $$
+\par В сумме оставляем те слагаемые, для которых $\delta \vec{r_i} \ne \delta \vec{r_j} = 0$, и пускай $\delta \vec{r_i} =\delta \vec{r}$, тогда 
+$$ \psi (\{ \vec{r_i} + \delta \vec{r_i} \}) \approx  \psi (\{ \vec{r_i} \}) \delta \vec{r} \sum_{j} \nabla _j \psi $$
+\par Рассмотрим трансляцию в уравнении Шредингера ($\sqsupset \hat{H(\bcancel{\vec{r}})}$ ). Система инвариантна, если $[\sum_{i} \nabla _i {,} \hat{H}] =0$. Вообще должен выполняться ЗСЭ, с точки зрения операторов все сошьется.
